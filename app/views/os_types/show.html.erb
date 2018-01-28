@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @os_type.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @os_type.description %>
+</p>
+
+<p>
+  <strong>Egc server type:</strong>
+  <%= @os_type.egc_server_type %>
+</p>
+
+<%= link_to 'Edit', edit_os_type_path(@os_type) %> |
+<%= link_to 'Back', os_types_path %>
