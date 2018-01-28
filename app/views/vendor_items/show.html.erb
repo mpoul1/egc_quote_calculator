@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @vendor_item.name %>
+</p>
+
+<p>
+  <strong>Purchased price:</strong>
+  <%= @vendor_item.purchased_price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @vendor_item.description %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @vendor_item.vendor %>
+</p>
+
+<p>
+  <strong>Quote request item:</strong>
+  <%= @vendor_item.quote_request_item %>
+</p>
+
+<%= link_to 'Edit', edit_vendor_item_path(@vendor_item) %> |
+<%= link_to 'Back', vendor_items_path %>

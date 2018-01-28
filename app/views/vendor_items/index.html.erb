@@ -1,0 +1,33 @@
+<h1>Listing vendor_items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Purchased price</th>
+      <th>Description</th>
+      <th>Vendor</th>
+      <th>Quote request item</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vendor_items.each do |vendor_item| %>
+      <tr>
+        <td><%= vendor_item.name %></td>
+        <td><%= vendor_item.purchased_price %></td>
+        <td><%= vendor_item.description %></td>
+        <td><%= vendor_item.vendor %></td>
+        <td><%= vendor_item.quote_request_item %></td>
+        <td><%= link_to 'Show', vendor_item %></td>
+        <td><%= link_to 'Edit', edit_vendor_item_path(vendor_item) %></td>
+        <td><%= link_to 'Destroy', vendor_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vendor item', new_vendor_item_path %>
