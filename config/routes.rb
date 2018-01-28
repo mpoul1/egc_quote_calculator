@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :request_statuses
+
   resources :vendor_statuses
 
   resources :item_prices

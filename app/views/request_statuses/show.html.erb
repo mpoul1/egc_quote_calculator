@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @request_status.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @request_status.description %>
+</p>
+
+<p>
+  <strong>Quote request:</strong>
+  <%= @request_status.quote_request %>
+</p>
+
+<%= link_to 'Edit', edit_request_status_path(@request_status) %> |
+<%= link_to 'Back', request_statuses_path %>
