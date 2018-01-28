@@ -1,15 +1,34 @@
-<%= simple_form_for(@quote_request_item_storage) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :capacity %>
-    <%= f.input :backup_size %>
-    <%= f.association :quote_request_item_server %>
+<%= form_for @quote_request_item_storage, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :name, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :name, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :description, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :capacity, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :capacity, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :backup_size, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :backup_size, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  quote_request_item_storages_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>

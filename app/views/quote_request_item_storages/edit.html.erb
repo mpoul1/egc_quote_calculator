@@ -1,6 +1,5 @@
-<h1>Editing quote_request_item_storage</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @quote_request_item_storage %> |
-<%= link_to 'Back', quote_request_item_storages_path %>
+<%- model_class = QuoteRequestItemStorage -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => QuoteRequestItemStorage %></h1>
+</div>
+<%= render :partial => 'form' %>
