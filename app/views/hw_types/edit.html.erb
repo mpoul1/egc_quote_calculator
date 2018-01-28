@@ -1,6 +1,5 @@
-<h1>Editing hw_type</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @hw_type %> |
-<%= link_to 'Back', hw_types_path %>
+<%- model_class = HWType -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => HWType %></h1>
+</div>
+<%= render :partial => 'form' %>
