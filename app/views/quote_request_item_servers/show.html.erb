@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Required cpu:</strong>
+  <%= @quote_request_item_server.required_cpu %>
+</p>
+
+<p>
+  <strong>Required ram:</strong>
+  <%= @quote_request_item_server.required_ram %>
+</p>
+
+<p>
+  <strong>Quote request item:</strong>
+  <%= @quote_request_item_server.quote_request_item %>
+</p>
+
+<%= link_to 'Edit', edit_quote_request_item_server_path(@quote_request_item_server) %> |
+<%= link_to 'Back', quote_request_item_servers_path %>

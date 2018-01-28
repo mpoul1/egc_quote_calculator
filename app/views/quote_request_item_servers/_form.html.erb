@@ -1,0 +1,13 @@
+<%= simple_form_for(@quote_request_item_server) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :required_cpu %>
+    <%= f.input :required_ram %>
+    <%= f.association :quote_request_item %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

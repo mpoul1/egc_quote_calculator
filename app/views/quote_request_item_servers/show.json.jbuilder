@@ -1,0 +1,1 @@
+json.partial! "quote_request_item_servers/quote_request_item_server", quote_request_item_server: @quote_request_item_server

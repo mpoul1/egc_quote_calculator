@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :quote_request_item_servers
+
   resources :os_types
 
   resources :hw_types

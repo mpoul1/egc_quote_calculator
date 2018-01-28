@@ -1,0 +1,29 @@
+<h1>Listing quote_request_item_servers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Required cpu</th>
+      <th>Required ram</th>
+      <th>Quote request item</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quote_request_item_servers.each do |quote_request_item_server| %>
+      <tr>
+        <td><%= quote_request_item_server.required_cpu %></td>
+        <td><%= quote_request_item_server.required_ram %></td>
+        <td><%= quote_request_item_server.quote_request_item %></td>
+        <td><%= link_to 'Show', quote_request_item_server %></td>
+        <td><%= link_to 'Edit', edit_quote_request_item_server_path(quote_request_item_server) %></td>
+        <td><%= link_to 'Destroy', quote_request_item_server, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quote request item server', new_quote_request_item_server_path %>
