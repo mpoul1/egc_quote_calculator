@@ -1,0 +1,1 @@
+json.partial! "quote_request_item_storages/quote_request_item_storage", quote_request_item_storage: @quote_request_item_storage

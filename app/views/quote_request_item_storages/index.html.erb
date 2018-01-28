@@ -1,0 +1,33 @@
+<h1>Listing quote_request_item_storages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Capacity</th>
+      <th>Backup size</th>
+      <th>Quote request item server</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quote_request_item_storages.each do |quote_request_item_storage| %>
+      <tr>
+        <td><%= quote_request_item_storage.name %></td>
+        <td><%= quote_request_item_storage.description %></td>
+        <td><%= quote_request_item_storage.capacity %></td>
+        <td><%= quote_request_item_storage.backup_size %></td>
+        <td><%= quote_request_item_storage.quote_request_item_server %></td>
+        <td><%= link_to 'Show', quote_request_item_storage %></td>
+        <td><%= link_to 'Edit', edit_quote_request_item_storage_path(quote_request_item_storage) %></td>
+        <td><%= link_to 'Destroy', quote_request_item_storage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quote request item storage', new_quote_request_item_storage_path %>

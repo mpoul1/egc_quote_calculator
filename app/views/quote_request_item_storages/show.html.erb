@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @quote_request_item_storage.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @quote_request_item_storage.description %>
+</p>
+
+<p>
+  <strong>Capacity:</strong>
+  <%= @quote_request_item_storage.capacity %>
+</p>
+
+<p>
+  <strong>Backup size:</strong>
+  <%= @quote_request_item_storage.backup_size %>
+</p>
+
+<p>
+  <strong>Quote request item server:</strong>
+  <%= @quote_request_item_storage.quote_request_item_server %>
+</p>
+
+<%= link_to 'Edit', edit_quote_request_item_storage_path(@quote_request_item_storage) %> |
+<%= link_to 'Back', quote_request_item_storages_path %>
