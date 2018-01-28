@@ -1,6 +1,5 @@
-<h1>Editing item_price_type</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @item_price_type %> |
-<%= link_to 'Back', item_price_types_path %>
+<%- model_class = ItemPriceType -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => ItemPriceType %></h1>
+</div>
+<%= render :partial => 'form' %>
