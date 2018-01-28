@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @vendor_status.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @vendor_status.description %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @vendor_status.active %>
+</p>
+
+<%= link_to 'Edit', edit_vendor_status_path(@vendor_status) %> |
+<%= link_to 'Back', vendor_statuses_path %>

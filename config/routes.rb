@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :vendor_statuses
+
   resources :item_prices
 
   resources :vendor_item_types
