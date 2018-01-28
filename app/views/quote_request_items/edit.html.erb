@@ -1,6 +1,5 @@
-<h1>Editing quote_request_item</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @quote_request_item %> |
-<%= link_to 'Back', quote_request_items_path %>
+<%- model_class = QuoteRequestItem -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => QuoteRequestItem %></h1>
+</div>
+<%= render :partial => 'form' %>
