@@ -1,0 +1,31 @@
+<h1>Listing item_price_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Active</th>
+      <th>Item price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @item_price_types.each do |item_price_type| %>
+      <tr>
+        <td><%= item_price_type.name %></td>
+        <td><%= item_price_type.description %></td>
+        <td><%= item_price_type.active %></td>
+        <td><%= item_price_type.item_price %></td>
+        <td><%= link_to 'Show', item_price_type %></td>
+        <td><%= link_to 'Edit', edit_item_price_type_path(item_price_type) %></td>
+        <td><%= link_to 'Destroy', item_price_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Item price type', new_item_price_type_path %>
