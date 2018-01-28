@@ -1,0 +1,27 @@
+<h1>Listing quote_request_items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pieces</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quote_request_items.each do |quote_request_item| %>
+      <tr>
+        <td><%= quote_request_item.pieces %></td>
+        <td><%= quote_request_item.description %></td>
+        <td><%= link_to 'Show', quote_request_item %></td>
+        <td><%= link_to 'Edit', edit_quote_request_item_path(quote_request_item) %></td>
+        <td><%= link_to 'Destroy', quote_request_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quote request item', new_quote_request_item_path %>
