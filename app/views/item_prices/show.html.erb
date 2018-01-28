@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Valid from:</strong>
+  <%= @item_price.valid_from %>
+</p>
+
+<p>
+  <strong>Valid to:</strong>
+  <%= @item_price.valid_to %>
+</p>
+
+<p>
+  <strong>Valid price:</strong>
+  <%= @item_price.valid_price %>
+</p>
+
+<p>
+  <strong>Vendor item:</strong>
+  <%= @item_price.vendor_item %>
+</p>
+
+<%= link_to 'Edit', edit_item_price_path(@item_price) %> |
+<%= link_to 'Back', item_prices_path %>
