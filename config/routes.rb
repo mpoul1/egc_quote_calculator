@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :vendor_item_types
+
   resources :vendor_items do
   #->Prelang (voting/acts_as_votable)
   member do

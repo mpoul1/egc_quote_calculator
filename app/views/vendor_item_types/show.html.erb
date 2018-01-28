@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @vendor_item_type.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @vendor_item_type.description %>
+</p>
+
+<p>
+  <strong>Vendor item:</strong>
+  <%= @vendor_item_type.vendor_item %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @vendor_item_type.active %>
+</p>
+
+<p>
+  <strong>Quote request item:</strong>
+  <%= @vendor_item_type.quote_request_item %>
+</p>
+
+<%= link_to 'Edit', edit_vendor_item_type_path(@vendor_item_type) %> |
+<%= link_to 'Back', vendor_item_types_path %>
