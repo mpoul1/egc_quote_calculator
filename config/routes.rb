@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :egc_server_cluster_types
+
   resources :customer_tax_zones
 
   resources :request_statuses

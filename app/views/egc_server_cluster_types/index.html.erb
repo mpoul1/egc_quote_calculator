@@ -1,0 +1,31 @@
+<h1>Listing egc_server_cluster_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Quote request item server</th>
+      <th>Egc server type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @egc_server_cluster_types.each do |egc_server_cluster_type| %>
+      <tr>
+        <td><%= egc_server_cluster_type.name %></td>
+        <td><%= egc_server_cluster_type.description %></td>
+        <td><%= egc_server_cluster_type.quote_request_item_server %></td>
+        <td><%= egc_server_cluster_type.egc_server_type %></td>
+        <td><%= link_to 'Show', egc_server_cluster_type %></td>
+        <td><%= link_to 'Edit', edit_egc_server_cluster_type_path(egc_server_cluster_type) %></td>
+        <td><%= link_to 'Destroy', egc_server_cluster_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Egc server cluster type', new_egc_server_cluster_type_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @egc_server_cluster_type.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @egc_server_cluster_type.description %>
+</p>
+
+<p>
+  <strong>Quote request item server:</strong>
+  <%= @egc_server_cluster_type.quote_request_item_server %>
+</p>
+
+<p>
+  <strong>Egc server type:</strong>
+  <%= @egc_server_cluster_type.egc_server_type %>
+</p>
+
+<%= link_to 'Edit', edit_egc_server_cluster_type_path(@egc_server_cluster_type) %> |
+<%= link_to 'Back', egc_server_cluster_types_path %>
