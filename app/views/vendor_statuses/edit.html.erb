@@ -1,6 +1,5 @@
-<h1>Editing vendor_status</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @vendor_status %> |
-<%= link_to 'Back', vendor_statuses_path %>
+<%- model_class = VendorStatus -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => VendorStatus %></h1>
+</div>
+<%= render :partial => 'form' %>
