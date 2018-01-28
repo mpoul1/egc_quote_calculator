@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :hw_type do
     name "MyString"
     description "MyText"

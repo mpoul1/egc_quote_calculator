@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :quote_request do
     project "MyString"
     customer nil

@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :vendor_item do
     name "MyString"
     purchased_price 1.5

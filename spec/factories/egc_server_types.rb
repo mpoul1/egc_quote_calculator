@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :egc_server_type do
     name "MyString"
     description "MyText"

@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :vendor do
     name "MyString"
     account_manager_email "MyString"

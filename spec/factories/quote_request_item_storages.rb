@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :quote_request_item_storage do
     name "MyString"
     description "MyText"

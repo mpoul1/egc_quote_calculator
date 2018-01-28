@@ -5,7 +5,7 @@ class CreateQuoteRequestItemStorages < ActiveRecord::Migration
       t.text :description
       t.integer :capacity
       t.integer :backup_size
-      t.references :quote_request_item_server, index: true
+      t.references :quote_request_item_server, index: false
 
       t.timestamps
     end

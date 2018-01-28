@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :customer_tax_zone do
     name "MyString"
     description "MyText"
