@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hw_type.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @hw_type.description %>
+</p>
+
+<p>
+  <strong>Egc server type:</strong>
+  <%= @hw_type.egc_server_type %>
+</p>
+
+<%= link_to 'Edit', edit_hw_type_path(@hw_type) %> |
+<%= link_to 'Back', hw_types_path %>

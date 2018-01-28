@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :hw_types
+
   resources :egc_server_types
 
   resources :quote_request_item_storages
