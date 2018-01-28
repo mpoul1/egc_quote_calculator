@@ -1,6 +1,5 @@
-<h1>Editing os_type</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @os_type %> |
-<%= link_to 'Back', os_types_path %>
+<%- model_class = OSType -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => OSType %></h1>
+</div>
+<%= render :partial => 'form' %>
