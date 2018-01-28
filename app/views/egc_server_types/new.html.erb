@@ -1,5 +1,6 @@
-<h1>New egc_server_type</h1>
+<%- model_class = EGCServerType -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => EGCServerType %></h1>
+</div>
+<%= render :partial => 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', egc_server_types_path %>
