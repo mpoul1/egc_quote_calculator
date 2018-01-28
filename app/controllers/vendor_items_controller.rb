@@ -1,5 +1,5 @@
 class VendorItemsController < ApplicationController
-  before_action :set_vendor_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_vendor_item, only: [:show, :edit, :update, :destroy, :vote]
 
   # GET /vendor_items
   # GET /vendor_items.json
