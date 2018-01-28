@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :customer_tax_zones
+
   resources :request_statuses
 
   resources :vendor_statuses

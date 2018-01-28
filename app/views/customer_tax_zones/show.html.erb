@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @customer_tax_zone.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @customer_tax_zone.description %>
+</p>
+
+<p>
+  <strong>Tax:</strong>
+  <%= @customer_tax_zone.tax %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @customer_tax_zone.customer %>
+</p>
+
+<%= link_to 'Edit', edit_customer_tax_zone_path(@customer_tax_zone) %> |
+<%= link_to 'Back', customer_tax_zones_path %>

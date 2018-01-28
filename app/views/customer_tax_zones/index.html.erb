@@ -1,0 +1,31 @@
+<h1>Listing customer_tax_zones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Tax</th>
+      <th>Customer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customer_tax_zones.each do |customer_tax_zone| %>
+      <tr>
+        <td><%= customer_tax_zone.name %></td>
+        <td><%= customer_tax_zone.description %></td>
+        <td><%= customer_tax_zone.tax %></td>
+        <td><%= customer_tax_zone.customer %></td>
+        <td><%= link_to 'Show', customer_tax_zone %></td>
+        <td><%= link_to 'Edit', edit_customer_tax_zone_path(customer_tax_zone) %></td>
+        <td><%= link_to 'Destroy', customer_tax_zone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Customer tax zone', new_customer_tax_zone_path %>
