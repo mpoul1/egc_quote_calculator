@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :customers
+
   resources :quote_requests
 
   resources :quote_request_items
