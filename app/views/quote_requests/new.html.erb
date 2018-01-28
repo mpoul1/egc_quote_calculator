@@ -1,5 +1,6 @@
-<h1>New quote_request</h1>
+<%- model_class = QuoteRequest -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => QuoteRequest %></h1>
+</div>
+<%= render :partial => 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', quote_requests_path %>
