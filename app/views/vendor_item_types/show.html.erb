@@ -1,29 +1,28 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = VendorItemType -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => VendorItemType %></h1>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @vendor_item_type.name %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:name) %></dt>
+      <dd><pre class="prettyprint"><%= @vendor_item_type.name %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:description) %></dt>
+      <dd><pre class="prettyprint"><%= @vendor_item_type.description %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:active) %></dt>
+      <dd><pre class="prettyprint"><%= @vendor_item_type.active %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @vendor_item_type.description %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              vendor_item_types_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_vendor_item_type_path(@vendor_item_type), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              vendor_item_type_path(@vendor_item_type),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Vendor item:</strong>
-  <%= @vendor_item_type.vendor_item %>
-</p>
-
-<p>
-  <strong>Active:</strong>
-  <%= @vendor_item_type.active %>
-</p>
-
-<p>
-  <strong>Quote request item:</strong>
-  <%= @vendor_item_type.quote_request_item %>
-</p>
-
-<%= link_to 'Edit', edit_vendor_item_type_path(@vendor_item_type) %> |
-<%= link_to 'Back', vendor_item_types_path %>
