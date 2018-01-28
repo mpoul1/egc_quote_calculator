@@ -1,5 +1,6 @@
-<h1>New vendor</h1>
+<%- model_class = Vendor -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => Vendor %></h1>
+</div>
+<%= render :partial => 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', vendors_path %>
