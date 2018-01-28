@@ -1,31 +1,40 @@
-<h1>Listing item_prices</h1>
-
-<table>
+<%- model_class = ItemPrice -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => ItemPrice %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Valid from</th>
-      <th>Valid to</th>
-      <th>Valid price</th>
-      <th>Vendor item</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:valid_from) %></th>
+      <th><%= model_class.human_attribute_name(:valid_to) %></th>
+      <th><%= model_class.human_attribute_name(:valid_price) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @item_prices.each do |item_price| %>
       <tr>
+        <td><%= item_price.id %></td>
         <td><%= item_price.valid_from %></td>
         <td><%= item_price.valid_to %></td>
         <td><%= item_price.valid_price %></td>
-        <td><%= item_price.vendor_item %></td>
-        <td><%= link_to 'Show', item_price %></td>
-        <td><%= link_to 'Edit', edit_item_price_path(item_price) %></td>
-        <td><%= link_to 'Destroy', item_price, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l item_price.created_at, format: :long %></td>
+        <td>
+          <%= link_to item_price_path(item_price), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to item_price_path(item_price), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Item price', new_item_price_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_item_price_path,
+            :class => 'btn btn-primary' %>
