@@ -1,6 +1,5 @@
-<h1>Editing egc_server_cluster_type</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @egc_server_cluster_type %> |
-<%= link_to 'Back', egc_server_cluster_types_path %>
+<%- model_class = EGCServerClusterType -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => EGCServerClusterType %></h1>
+</div>
+<%= render :partial => 'form' %>
